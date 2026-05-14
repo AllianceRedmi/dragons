@@ -1,1 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-bottom: 3px solid #e94560;
+}
+
+h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 3.5rem;
+    color: #e94560;
+    text-shadow: 0 0 20px rgba(233, 69, 96, 0.5);
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    font-weight: 300;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.filter-btn {
+    padding: 0.8rem 1.5rem;
+    border: 2px solid #e94560;
+    background: transparent;
+    color: #fff;
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #e94560;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(233, 69, 96, 0.4);
+}
+
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.dragon-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.dragon-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid rgba(233, 69, 96, 0.3);
+}
+
+.dragon-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(233, 69, 96, 0.3);
+}
+
+.dragon-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    background: linear-gradient(45deg, #e94560, #0f3460);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+}
+
+.dragon-info {
+    padding: 1.5rem;
+}
+
+.dragon-name {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    color: #e94560;
+    margin-bottom: 0.5rem;
+}
+
+.dragon-type {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.dragon-preview {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    margin: 5% auto;
+    padding: 2rem;
+    border: 2px solid #e94560;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 700px;
+    position: relative;
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #e94560;
+}
+
+#modalTitle {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    color: #e94560;
+    margin-bottom: 1rem;
+}
+
+.modal-image {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(45deg, #e94560, #0f3460);
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8rem;
+}
+
+#modalDescription {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.modal-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    text-transform: uppercase;
+}
+
+.stat-value {
+    font-family: 'Cinzel', serif;
+    font-size: 1.3rem;
+    color: #e94560;
+    margin-top: 0.3rem;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.3);
+    margin-top: 3rem;
+    border-top: 1px solid rgba(233, 69, 96, 0.3);
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .dragon-gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-content {
+        margin: 10% auto;
+        width: 95%;
+    }
+}
