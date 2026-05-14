@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мир Драконов</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>🐉 Мир Драконов</h1>
+        <p class="subtitle">Легендарные существа из мифов и сказок</p>
+    </header>
 
+    <nav>
+        <button class="filter-btn active" data-filter="all">Все</button>
+        <button class="filter-btn" data-filter="fire">Огненные</button>
+        <button class="filter-btn" data-filter="ice">Ледяные</button>
+        <button class="filter-btn" data-filter="storm">Грозовые</button>
+        <button class="filter-btn" data-filter="ancient">Древние</button>
+    </nav>
+
+    <main>
+        <div class="dragon-gallery" id="dragonGallery">
+            <!-- Драконы будут загружены через JavaScript -->
+        </div>
+    </main>
+
+    <div class="modal" id="dragonModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <div class="modal-image" id="modalImage"></div>
+            <p id="modalDescription"></p>
+            <div class="modal-stats" id="modalStats"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Мир Драконов. Создано с любовью к фэнтези.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
